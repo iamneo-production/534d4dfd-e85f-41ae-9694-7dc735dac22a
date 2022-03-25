@@ -3,12 +3,8 @@
     height:100%;
 }
 .page{
-    background-color: rgb(11, 11, 155);
+    background-color: rgb(15, 15, 179);
     display: flex;
-}
-.page p{
-    margin-top: 1.7rem;
-
 }
 .right{
     margin-left: 55rem;
@@ -18,7 +14,7 @@
     justify-content: space-around;
 }
 .image{
-    background-image: url(./Images/background.jpg);
+    background-image: url("./Images/background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -40,7 +36,7 @@
     outline: none;
 }
 .nav button{
-    background-color: rgb(3, 3, 88);
+    background-color: rgb(11, 11, 155);
     color: white;
     margin-left: 2rem;
     padding: .5rem;
@@ -48,5 +44,12 @@
     padding-right: 2rem;
 }
 .cards{
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
+.page h5{
+    margin-left: 45rem;
+    color: white;
+}
+
+
+
