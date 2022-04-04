@@ -1,6 +1,7 @@
 import React from 'react'
 import Cards from './Cards';
-import {BrowserRouter as Router,Routes,Link,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes ,Link,Route} from 'react-router-dom';
+import AddTheme from './Theme/AddTheme';
 import content from './Content';
 import "./Style.scss";
 const Main = () => {
@@ -9,8 +10,8 @@ const Main = () => {
     <div class="Main">
     <div class="p-3 mb-2 text-white page">
     <h3>Birthday Event</h3>
-    <Link to="/(componentName)" style={{color:"white" ,textDecoration: "none" ,paddingLeft:"3rem",paddingTop:".5rem"}}>Book Event</Link>
-    <Link to="/(componentName)" style={{color:"white" ,textDecoration: "none",paddingLeft:"2rem",paddingTop:".5rem"}}>View Booked event</Link>
+    <Link to="/theme" style={{color:"white" ,textDecoration: "none" ,paddingLeft:"3rem",paddingTop:".3rem"}}>Book Event</Link>
+    <Link to="/(componentName)" style={{color:"white" ,textDecoration: "none",paddingLeft:"2rem",paddingTop:".3rem"}}>View Booked event</Link>
     <h5 style={{paddingTop:".5rem"}}>Logout</h5>
     </div>
     <div class="image">
@@ -24,10 +25,9 @@ const Main = () => {
         <Cards items={content[2]} />
   </div>
   </div>
-<Routes>
-        {/* <Route path="/home" exact component={redirecting component}/> */}
-         {/* <Route path="/About" exact component={redirecting component}}/> */}
- </Routes>
+  <Routes>
+          <Route path="/theme" element={<AddTheme/>}/>
+      </Routes>
 </div>
 </Router>
   )

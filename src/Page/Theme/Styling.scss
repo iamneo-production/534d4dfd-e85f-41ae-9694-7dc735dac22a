@@ -1,0 +1,64 @@
+.bg{
+    background-color: rgba(16, 1, 58, 0.87);
+    display: flex;
+}
+.line1{
+    float:left; 
+    width:20%;
+    margin-left: 4rem;
+    padding: 2rem;   
+}
+.line2{
+    float:right; 
+    width:60%;
+    padding: 2rem;
+}
+.img1{
+    height: 12rem;
+    width: 22rem;
+}
+.image{
+    background-image: url('../Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.img2{
+    height: 10rem;
+    width: 15rem;
+    margin-right: 4rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    top: 117%;
+    right: 0;
+}
+.text{
+    margin-top: 3rem;
+    background-color:rgb(172, 171, 169);
+    height: 3rem;
+    width: 20rem;
+    color: black;
+    border-radius: .2rem;
+    text-align: center;
+    padding-top: .7rem;
+    font-weight:500;
+}
+.multi{
+    margin-top: 3rem;
+    background-color:rgb(172, 171, 169);
+    height: 8rem;
+    width: 20rem;
+    color: black;
+    border-radius: .2rem;
+    text-align: center;
+    padding-top: 3rem;
+    font-weight:500;
+}
+.line3 Button{
+    position:absolute;
+    right:0;
+    bottom:-90%;
+    margin-right: 4rem;
+    background-color: rgba(41, 10, 99, 0.87);
+    color: white;
+    border: none;
+}
