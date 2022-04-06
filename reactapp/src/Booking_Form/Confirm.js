@@ -36,7 +36,7 @@ export class Confirm extends Component {
     formData.append('status', 1);    
     axios({
         method: 'post',
-        url: 'http://localhost/api-student/event.php',
+        url: 'http://localhost/book/add',
         data: formData,
         config: { headers: {'Content-Type': 'multipart/form-data' }}
     })

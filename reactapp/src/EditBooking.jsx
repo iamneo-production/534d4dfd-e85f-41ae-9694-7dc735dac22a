@@ -51,7 +51,7 @@ const EditBooking = () => {
       formData.append('selectAddOnCatogory', user.selectAddOnCatogory);      
       axios({
           method: 'put',
-          url: 'http://localhost/api-student/event.php',
+          url: 'http://localhost/book/update/'+id,
           data: formData,
           config: { headers: {'Content-Type': 'multipart/form-data' }}
       })
@@ -70,7 +70,7 @@ const EditBooking = () => {
 
    const loadUser = async () => {
       var id = localStorage.getItem('id');      
-      axios.get('http://localhost/api-student/event.php/'+id).then(result => {         
+      axios.get('http://localhost/book/'+id).then(result => {         
          setUser(result.data);
       });
    };

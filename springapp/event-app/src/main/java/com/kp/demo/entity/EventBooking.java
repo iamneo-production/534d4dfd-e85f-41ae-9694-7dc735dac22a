@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "event")
-public class Book {
+public class EventBooking {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
@@ -54,7 +54,7 @@ public class Book {
 	private String status;
 
 
-	public Book() { }
+	public EventBooking() { }
 
 
 	public Integer getId() {

@@ -16,20 +16,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kp.demo.entity.Book;
+import com.kp.demo.entity.EventBooking;
 import com.kp.demo.repository.BookRepository;
 
 @CrossOrigin
 @RestController
 @RequestMapping("/book")
-public class BookController {
+public class EventBookingController {
 	@Autowired
 	BookRepository bookRepository;
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Book> getBookById(@PathVariable("id") Integer id) {
+	public ResponseEntity<EventBooking> getBookById(@PathVariable("id") Integer id) {
 
-		Optional<Book> book = bookRepository.findById(id);
+		Optional<EventBooking> book = bookRepository.findById(id);
 		if (book.isPresent()) {
 			return new ResponseEntity<>(book.get(), HttpStatus.OK);
 		} else {
@@ -38,10 +38,26 @@ public class BookController {
 
 	}
 
+	@GetMapping("/applicantName/{applicantName}")
+	public ResponseEntity<List<EventBooking>> getBookingByName(@PathVariable("applicantName") String appname) {
+
+		List<EventBooking> book = bookRepository.findByApplicantName(appname);
+		if (!book.isEmpty()) {
+			return new ResponseEntity<>(book , HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+
+
+
+
 	@GetMapping("/list")
-	public ResponseEntity<List<Book>> getAllBooks() {
+	public ResponseEntity<List<EventBooking>> getAllBooks() {
 		try {
-			List<Book> books = bookRepository.findAll();
+			List<EventBooking> books = bookRepository.findAll();
 			if (books.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
@@ -52,9 +68,9 @@ public class BookController {
 	}
 
 	@PostMapping("/add")
-	public ResponseEntity<Book> addBook(@RequestBody Book model) {
+	public ResponseEntity<EventBooking> addBook(@RequestBody EventBooking model) {
 		try {
-			Book book = bookRepository.save(model);
+			EventBooking book = bookRepository.save(model);
 			return new ResponseEntity<>(book, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -62,15 +78,16 @@ public class BookController {
 	}
 
 	@PutMapping("/update/{id}")
-	public ResponseEntity<Book> updateBook(@PathVariable("id") Integer id, @RequestBody Book model) {
-		Optional<Book> existingBook = bookRepository.findById(id);
+	public ResponseEntity<EventBooking> updateBook(@PathVariable("id") Integer id, @RequestBody EventBooking model) {
+		Optional<EventBooking> existingBook = bookRepository.findById(id);
 		if (existingBook.isPresent()) {
-			Book book = existingBook.get();
+			EventBooking book = existingBook.get();
 			book.setApplicantAddress(model.getApplicantAddress());
 			book.setApplicantEmailId(model.getApplicantEmailId());
 			book.setApplicantMobileNo(model.getApplicantMobileNo());
 			book.setApplicantName(model.getApplicantName());
 			book.setEventAddress(model.getEventAddress());
+			book.setEventName(model.getEventName());
 			book.setEventDate(model.getEventDate());
 			book.setEventTime(model.getEventTime());
 			book.setNoOfPeople(model.getNoOfPeople());

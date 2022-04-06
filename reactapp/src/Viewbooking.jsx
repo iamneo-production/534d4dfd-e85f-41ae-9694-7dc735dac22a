@@ -15,14 +15,14 @@ export class Viewbooking extends Component {
    }
   
    componentDidMount() {     
-      axios.get('http://localhost/api-student/event.php').then(res => {         
+      axios.get('http://localhost/book/applicantName/'+applicantName).then(res => {         
          this.setState({ data: res.data });
       });
    }
   
    render() {     
        const deleteUser = async id => {
-         axios.delete('http://localhost/api-student/event.php/'+id).then(res => {             
+         axios.delete('http://localhost/book/delete'+id).then(res => {             
             if(res.data.status == 1){
                alert("Successfully Deleted...!");
                this.componentDidMount();
