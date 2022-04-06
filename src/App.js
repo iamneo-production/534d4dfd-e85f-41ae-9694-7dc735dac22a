@@ -1,12 +1,12 @@
 import React from 'react';
-import Main from "./Page/Main"
+import AddTheme from "./Page/Theme/AddTheme"
 
 
 
 const App = () => {
   return (
     <div>
-    <Main/>
+    <AddTheme/>
     
     </div>
   )

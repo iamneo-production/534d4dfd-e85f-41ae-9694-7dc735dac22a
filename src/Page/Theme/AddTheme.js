@@ -10,6 +10,7 @@ const AddTheme = () => {
     <h3 style={{color:"white"}}>AddTheme</h3>
     <h6 style={{color:"white" ,textDecoration: "none" ,paddingLeft:"2rem",paddingTop:".6rem"}}>Food Menu</h6>
     <h6 style={{color:"white" ,textDecoration: "none" ,paddingLeft:"2rem",paddingTop:".6rem"}}>Add Add-ons</h6>
+    <h6 style={{color:"white" ,textDecoration: "none" ,paddingLeft:"55rem",paddingTop:".6rem"}}>Logout</h6>
     </div>
     <div className='image'>
     <div className='line1'>
