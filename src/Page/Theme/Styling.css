@@ -19,12 +19,7 @@
     height: 12rem;
     width: 22rem;
 }
-.image{
-    background-color: aqua;
-    background-image: url("./background2.jpg");
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-}
+
 .img2{
     height: 10rem;
     width: 15rem;
@@ -61,6 +56,7 @@
     right:0;
     bottom:10%;
     margin-right: 4rem;
+    border-radius: .2rem;
     background-color: rgba(41, 10, 99, 0.87);
     color: white;
     border: none;

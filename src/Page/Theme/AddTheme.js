@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Styling.scss";
+import "./Styling.css";
 import { Button } from '@mui/material';
 import kitchen from "../Images/kitchenImg.jpg";
 import flowers from "../Images/flowers.jpg";
@@ -12,6 +12,12 @@ const AddTheme = () => {
     <h6 style={{color:"white" ,textDecoration: "none" ,paddingLeft:"2rem",paddingTop:".6rem"}}>Add Add-ons</h6>
     <h6 style={{color:"white" ,textDecoration: "none" ,paddingLeft:"55rem",paddingTop:".6rem"}}>Logout</h6>
     </div>
+    <div className="application">
+            
+                <style>{'body { background-color: #ADD8E6; }'}</style>
+            
+            
+        </div>
     <div className='image'>
     <div className='line1'>
     <p className='text'>Enter Theme Name</p>
